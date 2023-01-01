@@ -3,11 +3,19 @@ import random
 
 
 def print_pause(message_to_print):
+    """
+    Python time.sleep() function
+    Prints pause between execution
+    """
     print(message_to_print)
     time.sleep(2)
 
 
 def adventure_intro(item, evil_options):
+    """
+    Adventure game intro
+    Items and options
+    """
     print_pause("\nYou find yourself standing in an open field, filled "
                 "with grass and yellow wildflowers.")
     print_pause("Rumor has it that a " + evil_options + " is somewhere "
@@ -19,6 +27,10 @@ def adventure_intro(item, evil_options):
 
 
 def field(item, evil_options):
+    """
+    Field settings for adventure game
+    Introduces field options
+    """
     print_pause("\nEnter 1 to knock on the door of the house.")
     print_pause("Enter 2 to peer into the cave.")
     print_pause("What would you like to do?")
@@ -33,6 +45,10 @@ def field(item, evil_options):
 
 
 def house_fight(item, evil_options):
+    """
+    House introduction
+    Options available for player also
+    """
     print_pause("You approach the door of the house.")
     print_pause("You are about to knock when the door opens and out "
                 "steps a " + evil_options + ".")
@@ -69,6 +85,10 @@ def house_fight(item, evil_options):
 
 
 def cave(item, evil_options):
+    """
+    Introduction to cave setting
+    Player given options to items available
+    """
     if "Sword of Ogoroth" in item:
         print_pause("You peer cautiously into the cave.")
         print_pause("You've been here before, and gotten all the good "
@@ -87,6 +107,10 @@ def cave(item, evil_options):
 
 
 def play_again():
+    """
+    Function to introduce continuous playing of game
+    Ensures game loop
+    """
     replay = input("Would you like to play again? (y/n)").lower()
     if replay == "y":
         print_pause("Excellent! Restarting the game...")
@@ -98,6 +122,10 @@ def play_again():
 
 
 def play_game():
+    """
+    Adventure game introduction
+    Player get ready to play
+    """
     item = []
     evil_options = random.choice(["dragon", "troll", "gorgon",
                                  "wicked fairie", "pirate", "ghoul"])
